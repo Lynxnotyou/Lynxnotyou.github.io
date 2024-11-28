@@ -1,0 +1,510 @@
+@import url('https://fonts.googleapis.com/css2?family=Krona+One&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@100..900&family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap');
+
+
+@keyframes changeColor {
+    0% {
+        color: rgb(350, 350, 350);
+        filter: blur(5px);
+    }
+
+    50% {
+        color: rgb(222, 20, 350);
+
+    }
+
+    75% {
+        color: rgb(100, 200, 350);
+
+    }
+
+    80% {
+        color: rgb(2, 350, 350);
+    }
+
+    100% {
+        color: rgb(350, 350, 350);
+        filter: blur(5px);
+
+    }
+}
+
+@keyframes Discount {
+    0% {
+        color: rgb(350, 350, 350);
+       
+    }
+
+    50% {
+        color: rgb(222, 20, 350);
+        
+        
+    }
+
+    75% {
+        color: rgb(100, 200, 350);
+
+    }
+
+    80% {
+        color: rgb(2, 350, 350);
+    }
+
+    100% {
+        color: rgb(350, 350, 350);
+        
+
+    }
+}
+
+/*---------------------------index.html---------------------------*/
+body {
+    background-color: rgb(28, 28, 28);
+
+    
+    margin: auto;
+    font-family: "Ubuntu", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+
+}
+.footer_anim    {
+    animation: Discount 10s infinite;
+}
+nav{
+    padding: 20px;
+}
+.d-flex
+{
+    display: flex;
+    justify-content: space-between;
+}
+
+.background {
+    font-size: 5vw;
+    color: aliceblue;
+    position: absolute;
+    left: 32%;
+    top: 25%;
+    animation: changeColor 10s infinite;
+    text-align: center;
+}
+
+.imgGirl{
+    
+    position: absolute;
+    bottom: 100px;
+}
+
+.logo {
+    color: aliceblue;
+    font-family: Krona One;
+    font-size: 35px;
+    font-weight: 400;
+    line-height: 60px;
+    letter-spacing: 0px;
+    text-align: left;
+
+}
+
+.burger{
+    display:none;
+    
+}
+
+
+.logo span {
+    color: #49a1c3;
+    font-family: Krona One;
+    font-size: 30px;
+    font-weight: 400;
+    line-height: 60px;
+    letter-spacing: 0px;
+    text-align: left;
+}
+
+.container {
+    max-width: 1900px;
+    
+    position: relative;
+}
+
+.container ul {
+    margin: 0;
+    display: flex;
+    justify-content: space-between;
+
+    
+    right: 5vw;
+    gap: 2vw;
+    list-style: none;
+    top: 1vw
+}
+
+.container ul a:hover {
+    color: #6e9ddb;
+
+    transition: all 0.5s;
+}
+
+a {
+    
+    display: block;
+    text-decoration: none;
+    color: aliceblue;
+    font-size: 25px;
+    padding: 10px;
+    gap: 5vw;
+}
+
+
+footer {
+   
+    position: fixed;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    color: #fff;
+    
+    bottom: 0;
+}
+
+footer li:hover {
+    color: #60b3d4;
+
+}
+
+.main-box ul {
+    display: flex;
+    position: absolute;
+    min-width: 50px;
+    right: 2%;
+    bottom: 10%;
+    gap: 5%;
+}
+
+.main-box ul img:nth-child(2) {
+    min-width: 2000px;
+    min-height: 60px;
+}
+
+/*---------------------------contacts.html---------------------------*/
+input {
+    display: block;
+    width: 400px;
+    height: 30px;
+    padding: 5px 10px 5px 10px;
+    border-radius: 5pt;
+    border: 2px solid #60b3d4;
+    background-color: rgb(32, 32, 32);
+    color: aliceblue;
+}
+
+.form-box {
+    max-width: 400px;
+    margin: 10% auto;
+    text-align: center;
+    left: 40%;
+    top: 35%;
+
+}
+
+label {
+    color: aliceblue;
+}
+
+button {
+    width: 400px;
+    height: 35px;
+    border-radius: 5pt;
+    background-color: #78aff7;
+}
+
+button:hover {
+    transform: scale(95%);
+    transition: all 0.5s;
+    background-color: #a0c2ee;
+
+}
+input:hover{
+    transform: scale(95%);
+    transition: all 0.5s;
+
+}
+/*---------------------------price.html---------------------------*/
+.price-box {
+    padding: 2%;
+    max-width: 500px;
+    text-align: center;
+    margin: auto;
+    font-size: 16px;
+}
+
+
+/*---------------------------Отсчет до конца скидки---------------------------*/
+.t{
+    display: flex;
+    justify-content: center;
+    margin: auto;
+    
+}
+
+.spanTime{
+    color: rgb(138, 216, 37);
+    font-size: 30px;
+    display: flex;
+    justify-content: center;
+    animation: Discount 10s infinite;
+}
+.Time{
+    font-size: 30px;
+
+}
+.timeend{
+    margin: auto;
+}
+tr {
+    color: rgb(216, 218, 219);
+}
+
+
+table.iksweb {
+    width: 110%;
+    border-collapse: collapse;
+    border-spacing: 0;
+    height: auto;
+    
+}
+
+table.iksweb tr:nth-child(2n) {
+    background-color: rgb(69, 69, 69);
+}
+
+table.iksweb,
+table.iksweb td,
+table.iksweb th {
+    border: 1px solid #9c8989;
+}
+
+table.iksweb td,
+table.iksweb th {
+    padding: 0.5vw;
+    width: 15vw;
+    height: 1vw;
+    
+}
+
+table.iksweb th {
+    background: #347c99;
+    color: #fff;
+    font-weight: normal;
+}
+
+
+.price-box label {
+    color: #ffffff;
+}
+
+span {
+    font-size: 20px;
+    color: aliceblue;
+}
+
+
+
+/*----------------------about---------------------------*/
+body{
+    overflow: hidden;
+}
+.mainAbout{
+    min-height:calc(100vh - 200px);
+    background-color: #6a8d9b;
+}
+li {
+    color: #fff;
+
+    display: block;
+}
+
+.main-box_about{
+    display: flex;
+    justify-content: center;
+    
+    
+    gap: 0.4vw;
+    
+
+}
+.taskNum{
+    text-align: center;
+    margin-top: 5%;
+}
+.main-box_about img{
+    
+    min-height: 250px;
+    max-width: 500px;
+}
+.main-box_social ul{
+    display: flex;
+    position: absolute;
+    bottom: 10%;
+    right: 1%;
+    gap: 0.4vw;
+}
+/*----------------------Моб версия---------------------------*/
+.body.active{
+    background-color: #347c99;
+    transition: all 0.8s ease-in-out;
+    z-index: 5;
+}
+
+.container ul.active {
+    display: block;
+    position: absolute;
+    margin-top: 40%;
+    padding-right: 25%;
+    padding-left: 25%;
+    
+   
+    /* left: 42%; */
+    /* top: 80%; */
+    z-index: 2;
+}
+
+/*---------------------------Задачки---------------------------*/
+.backM{
+    width: 200px;
+    height: 200px;
+}
+/*---------------------------скрытие в мобильном режиме---------------------------*/
+.price-box.active,
+.form-box.active,
+.main-box_about.active,
+.background.active,
+.spanTime.active{
+    display: none;
+    
+}
+
+
+
+
+@media screen and (max-width: 1150px) {
+    .container ul {
+        gap: 30px;
+    }
+    .spanTime{
+        font-size: 30px;
+       
+    }
+    .Time{
+        font-size: 25px;
+
+    }
+}
+
+@media screen and (max-width: 992px) {
+    .container ul {
+        display: none;
+        
+    }
+    .price-box span{
+        font-size: 15px;
+    }
+    .hamb__field{
+        width: 50px;
+        height: 50px;
+        top: 16px;
+        right: 20px;
+        position: absolute;
+    }
+    .spanTime{
+        font-size: 20px;
+       
+    }
+    .Time{
+        font-size: 18px;
+
+    }
+    .bar:nth-child(1){
+        display: block;
+        background-color: #fff;
+        width: 30px;
+        height: 2px;
+        top: 16px;
+        right: 10px;
+        transition: all 0.8s ease-in-out;
+        
+
+        position: absolute;
+        
+     }
+     .bar:nth-child(2){
+        display: block;
+        background-color: #fff;
+        width: 30px;
+        height: 2px;
+        top: 24px;
+        right: 10px;
+        transition: all 0.9s ease-out;
+
+
+        position: absolute;
+        
+     }
+     .bar.active:nth-child(2){
+        opacity: 0; 
+        transition: all 0.2s ease-out;
+
+        
+     }
+     .bar:nth-child(3){
+        display: block;
+        background-color: #fff;
+        width: 30px;
+        height: 2px;
+        top: 32px;
+        right: 10px;
+        transition: all 0.8s ease-in-out;
+    
+
+        position: absolute;
+        
+     }
+     
+     .bar.active:nth-child(1){
+        transform:translateY(6px) rotate(45deg);
+        transition: all 0.8s ease-in-out;
+        
+     }
+     
+     .bar.active:nth-child(3){
+        
+        transform: translateY(-9px) rotate(-45deg);
+        transition: all 0.8s ease-in-out;
+     }
+     .main-box_about {
+        flex-wrap: wrap;
+        
+
+     }
+     img{
+        scale: 80%;
+        gap: 0;
+     }
+     a{
+        padding: 0;
+     }
+     .taskNum{
+        margin-top: 0;
+        
+    }
+    .mainAbout{
+        max-height:calc(50vh - 110px);
+        background-color: #6a8d9b;
+        
+    }
+
+}
+

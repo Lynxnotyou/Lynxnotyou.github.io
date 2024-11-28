@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Prices</title>
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body id="body" class="body" onload="time()">
+    <header>
+        <div class="container">
+            <div class="hamb">
+                <div class="hamb__field" id="hamb">
+                    <span class="bar" id="bar1"></span>
+                    <span class="bar" id="bar2"></span>
+                    <span class="bar" id="bar3"></span>
+                </div>
+            </div>
+            <div class="d-flex">
+                <a href="index.html" class="logo">Pc. <span>Store</span></a>
+                <nav>
+                    <ul class="menu" id="menu">
+                        <li><a href="index.html">Главная</a></li>
+                        <li><a href="price.html">Прайс-лист</a></li>
+                        <li><a href="contacts.html">Контакты</a></li>
+                        <li><a href="about.html">Обо мне</a></li>
+                        <li><a href="tel:+79525946549" class="phone">+7(952) 594-65-49</a></li>
+                    </ul>
+
+                </nav>
+            </div>
+        </div>
+
+    </header>
+
+    <main>
+
+        <div class="price-box">
+            <div class="price-text-up">
+                <label>Цены на мои услуги</label>
+                <br>
+                <span>*Итоговая стоимость может меняться в зависимости от обьема работы</span>
+                <br>
+                <br>
+            </div>
+            <table class="iksweb">
+                <tbody>
+                    <tr>
+                        <td>Наименование работы</td>
+                        <td>Стоимость</td>
+                        <td>Сроки</td>
+                    </tr>
+                    <tr>
+                        <td>Написание кода на C#/C++/Phython</td>
+                        <td>от 2000 рублей</td>
+                        <td> </td>
+                    </tr>
+                    <tr>
+                        <td>JavaScript</td>
+                        <td> от 5000 рублей</td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>Сборка Пк</td>
+                        <td>от 30.000 рублей</td>
+                        <td>до 1 недели</td>
+                    </tr>
+                    <tr>
+                        <td>Редизайн сайта</td>
+                        <td>от 2000 рублей</td>
+                        <td>до 1 недели</td>
+                    </tr>
+                </tbody>
+            </table>
+
+        </div>
+        <div class="timeend">
+            <label class="spanTime">Скидка!!: <span id="t" class="Time">timeend</span></label>
+        </div>
+        
+
+    </main>
+        <img src="img/jsGirl.png" alt="" width="400" class="imgGirl">
+    <footer>
+        <div class="footer">
+            <ul>
+                <li>Сборка ПК</li>
+                <li>Верстка сайта на HTML/CSS</li>
+                <li>Помощь с написанием кода на C#/C++/Phython</li>
+            </ul>
+        </div>
+        <div class="main-box_social">
+            <ul>
+
+                <li><a href="https://vk.com/im?peers=559161872_c106_620603637_474184448_582789367_558319772_c109_536516668_-91050183"
+                        target="_blank"><img src="img/vk.png" alt=""></a></li>
+                <li><a href="#" target="_blank"><img src="img/whatsapp.png" alt=""></a></li>
+            </ul>
+
+
+        </div>
+    </footer>
+
+    <script>
+        timeend = new Date(2024, 10, 28);
+
+        function time() {
+            today = new Date();
+            today = Math.floor((timeend - today) / 1000);
+            tsec = today % 60;
+            today = Math.floor(today / 60);
+            if (tsec < 10)
+                tsec = '0' + tsec;
+            tmin = today % 60;
+            today = Math.floor(today / 60);
+            if (tmin < 10)
+                tmin = '0' + tmin;
+            thour = today % 24;
+            today = Math.floor(today / 24);
+            timestr = today + " дн-я/ей " + thour + " час-а/ов " + tmin + " минут(ы) " + tsec + " секунд(ы)";
+            document.getElementById('t').innerHTML = timestr;
+            window.setTimeout(time, 1000);
+        }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        let spanTime = document.querySelector('.spanTime')
+        let priceBox = document.querySelector('.price-box')
+        let menuBtn = document.querySelector('.hamb__field')
+        let menu = document.querySelector('.container ul')
+        let body = document.querySelector('#body')
+        let bar = document.querySelector('.bar')
+        let bar2 = document.querySelector('#bar2');
+        let bar3 = document.querySelector('#bar3');
+        menuBtn.addEventListener('click', () => {
+            spanTime.classList.toggle('active');
+            bar3.classList.toggle('active');
+            bar2.classList.toggle('active');
+            bar.classList.toggle('active');
+            body.classList.toggle('active');
+            menu.classList.toggle('active');
+            menuBtn.classList.toggle('active');
+            priceBox.classList.toggle('active');
+        })
+
+
+
+
+
+
+
+
+    </script>
+</body>
+
+</html>

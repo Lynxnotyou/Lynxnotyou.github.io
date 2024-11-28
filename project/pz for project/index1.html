@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Задание 1 </title>
+    <style>
+        
+        button{
+            margin-left: 45%;
+            margin-right:45%;
+            width: 180px;
+            height: 50px;
+            
+            
+        }
+    
+        li {
+            list-style: none;
+            font-size: 3vmin;
+            margin: 5%;
+            display: flex;
+            justify-content: center;
+
+        }
+
+        .background {
+            background-color: rgb(27, 27, 27);
+            ;
+        }
+
+        body {
+            background-color: rgb(28, 28, 28);
+        }
+
+        a {
+            text-decoration: none;
+            color: aliceblue;
+            
+        }
+        p{
+            color:azure 
+        }
+        .task{
+            display: flex;
+            justify-content: center;
+            
+            
+        
+        }
+        
+    </style>
+</head>
+
+<body>
+    <div class="task"><p>Создать html-страницу со списком ссылок.
+        Ссылки на внешние источники (которые начинаются с https://) необходимо выделить цветом.
+        Искать такие ссылки в списке и устанавливать им дополнительные стили необходимо с помощью JS.
+        быть развернут только один блок информации.</strong></p></div>
+        <div class="back"><a href="../about.html"><button class="backM">Назад</button></a></div>
+    <div class="background">
+        <ul>
+            <li><a href="http://google.com" target="_blank">https://google.com</a></li>
+            <li><a href="/tutorial" target="_blank">/tutorial.html</a></li>
+            <li><a href="local/path" target="_blank">local/path</a></li>
+            <li><a href="ftp://ftp.com/my.zip" target="_blank">ftp://ftp.com/my.zip</a></li>
+            <li><a href="http://nodejs.org" target="_blank">https://nodejs.org</a></li>
+            <li><a href="http://internal.com/test" target="_blank">https://internal.com/test</a></li>
+
+        </ul>
+    </div>
+</body>
+<script>
+    
+        
+        let links = document.querySelectorAll('a'); //ищем только a
+        links.forEach(function(link){
+            if(link.getAttribute('href').includes('http://')){ //выборка http://
+                link.style.color = 'red';
+            };
+        })
+        
+    
+
+    
+
+
+
+
+
+
+
+</script>
+
+</html>
