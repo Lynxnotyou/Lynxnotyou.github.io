@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contacts</title>
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/style.css">
+
+</head>
+
+<body id="body" class="body">
+    <header>
+        <div class="container">
+            <div class="hamb">
+                <div class="hamb__field" id="hamb">
+                    <span class="bar" id="bar1"></span>
+                    <span class="bar" id="bar2"></span>
+                    <span class="bar" id="bar3"></span>
+                </div>
+            </div>
+            <div class="d-flex">
+                <a href="index.html" class="logo">Pc. <span>Store</span></a>
+                <nav>
+                    <ul>
+                        <li><a href="index.html">Главная</a></li>
+                        <li><a href="price.html">Прайс-лист</a></li>
+                        <li><a href="contacts.html">Контакты</a></li>
+                        <li><a href="about.html">Обо мне</a></li>
+                        <li><a href="tel:+79525946549" class="phone">+7(952) 594-65-49</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+
+    </header>
+
+    <main>
+        <div class="form-box">
+            <form action="" class="form">
+                <label>СВЯЗАТЬСЯ С НАМИ</label>
+                <br>
+                <br>
+                <input id="username" class="username" name="name" placeholder="  ИМЯ">
+                <br>
+                <input class="tel" type="tel" name="telephone" placeholder="  ТЕЛЕФОН" pattern="^\+7[1-9]{10}$"  required>
+                <br>
+                <input type="email" name="email" placeholder="  EMAIL">
+                <br>
+                <button type="submit">ОТПРАВИТЬ</button>
+            </form>
+        </div>
+
+
+
+    </main>
+    <footer>
+        <div class="footer">
+            <ul>
+                <li>Сборка ПК</li>
+                <li>Верстка сайта на HTML/CSS</li>
+                <li>Помощь с написанием кода на C#/C++/Phython</li>
+            </ul>
+        </div>
+        <div class="main-box_social">
+            <ul>
+
+                <li><a href="https://vk.com/im?peers=559161872_c106_620603637_474184448_582789367_558319772_c109_536516668_-91050183"
+                        target="_blank"><img src="img/vk.png" alt=""></a></li>
+                <li><a href="#" target="_blank"><img src="img/whatsapp.png" alt=""></a></li>
+            </ul>
+
+
+        </div>
+    </footer>
+
+    <script>
+
+        const form = document.querySelector('.form');
+        const loginInput = form.querySelector('.username');
+        form.addEventListener('submit', (evt) => {
+
+            // Отменяем действие по умолчанию
+            evt.preventDefault();
+            const login = loginInput.value;
+            // Проверяем, что поля заполнены
+            if (!login) {
+                alert('Пожалуйста, заполните все поля');
+                return;
+            }
+
+            // Проверяем, что имя пользователя содержит только буквы и цифры
+            if (!isValidLogin(loginInput.value)) {
+                alert('Логин может содержать только буквы на латинице и цифры');
+                return;
+            }
+
+
+            form.submit();
+        });
+        function isValidLogin(login) {
+            // Проверка имени регулярным выражением
+            const pattern = /^[a-zA-Z0-9]+$/;
+            return pattern.test(login);
+        }
+
+ 
+
+
+
+        let formBox = document.querySelector('.form-box')
+        let menuBtn = document.querySelector('.hamb__field')
+        let body = document.querySelector('#body')
+        let menu = document.querySelector('.container ul')
+        let bar = document.querySelector('.bar')
+        let bar2 = document.querySelector('#bar2');
+        let bar3 = document.querySelector('#bar3');
+        menuBtn.addEventListener('click', () => {
+            bar3.classList.toggle('active');
+            bar2.classList.toggle('active');
+            bar.classList.toggle('active');
+            body.classList.toggle('active');
+            menu.classList.toggle('active');
+            menuBtn.classList.toggle('active');
+            formBox.classList.toggle('active');
+        })
+
+
+
+
+
+
+
+
+    </script>
+</body>
+
+</html>
